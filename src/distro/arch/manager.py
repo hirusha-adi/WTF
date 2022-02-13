@@ -64,6 +64,9 @@ def runArchInstaller():
                                   "fixupgrade", "upgradefix")):
         updates.fullUpgrade()
 
-    elif (all_args[0].strip() in ("setup", "setup-wtf", "setupwtf", "wtf", "wtfsetup")):
+    # Install the needed dependencies
+    # `sudo pacman -Sy base-devel git`
+    elif (all_args[0].strip() in ("setup", "setup-wtf", "setupwtf",
+                                  "wtf", "wtfsetup", "dependencies")):
         dependencies.install_main()
         dependencies.install_yay()
