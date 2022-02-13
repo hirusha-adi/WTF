@@ -14,3 +14,5 @@ def install_yay():
     os.system("git clone https://aur.archlinux.org/yay.git")
     os.chdir(os.path.join(os.getcwd(), "yay"))
     os.system("makepkg -si")
+    os.chdir("..")
+    os.system("rm -rf ./yay")
