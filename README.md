@@ -7,3 +7,7 @@ Linux Package Installer
 ## Arch Linux
 
 - `yay`
+
+## Debian
+
+- `snap`
