@@ -68,6 +68,7 @@ def runArchInstaller():
 
     # Install the needed dependencies
     # `sudo pacman -Sy base-devel git`
+    # and install `yay`
     elif (sub_command in ("setup", "setup-wtf", "setupwtf",
                           "wtf", "wtfsetup", "dependencies")):
         dependencies.install_main()
