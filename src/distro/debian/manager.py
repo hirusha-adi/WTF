@@ -4,7 +4,7 @@ import sys
 from . import dependencies, install, remove, showlist, updates, custom
 
 
-def runArchInstaller():
+def runDebianInstaller():
     sys_argv = sys.argv
     all_args = sys_argv[1:]
     sub_command = all_args[0].strip()
