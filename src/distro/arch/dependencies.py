@@ -1,7 +1,6 @@
 import os
 import sys
 
-import src.utils.db as db
 import src.utils.dirs as dirs
 
 
