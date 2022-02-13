@@ -14,10 +14,3 @@ def runCustom(args: list = None):
     ))
 
     os.system(f"sudo apt {final_command}")
-
-
-def install_betterDiscord():
-    os.system(
-        "curl -O https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl")
-    os.system("chmod +x betterdiscordctl")
-    os.system("sudo mv betterdiscordctl /usr/local/bin")
