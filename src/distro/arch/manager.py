@@ -1,7 +1,7 @@
 import os
 import sys
 
-from . import dependencies, install, remove, showlist, updates
+from . import dependencies, install, remove, showlist, updates, custom
 
 
 def runArchInstaller():
