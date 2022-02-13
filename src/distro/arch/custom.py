@@ -17,7 +17,7 @@ def runCustom(args: list = None):
 def install_betterDiscord():
     data = requests.get(
         "https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl").content
-    with open("") as file:
+    with open("betterdiscordctl", "wb") as file:
         file.write(data)
     os.system("chmod +x betterdiscordctl")
     os.system("sudo mv betterdiscordctl /usr/local/bin")
