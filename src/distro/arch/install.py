@@ -6,7 +6,6 @@ import sys
 
 
 def installPackage(args: list = None):
-    # New Code
     if args is None:
         sys.exit("[E] Please enter the package names to install")
 
@@ -20,10 +19,17 @@ def installPackage(args: list = None):
     os.system(f"yay -S {final_command}")
 
 
-def installPackageForce():
-    try:
-        program_names_all = sys.argv[2:]
-    except IndexError:
+def installPackageForce(args: list = None):
+    if args is None:
         sys.exit("[E] Please enter the package names to install")
-    for program_name in program_names_all:
-        os.system(f"yay -S {program_name}")
+
+    final_command = ""
+    for arg in args:
+        # to prevent passing the same arguments twice
+        if str(arg).strip().startswith("-S"):
+            continue
+        if str(arg).strip().startswith("--noconfirm"):
+            continue
+        final_command += f"{arg} "
+
+    os.system(f"yay -S {final_command} --noconfirm")
