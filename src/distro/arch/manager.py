@@ -5,7 +5,8 @@ from . import dependencies, install, remove, showlist, updates, custom
 
 
 def runArchInstaller():
-    all_args = sys.argv[1:]
+    sys_argv = sys.argv
+    all_args = sys_argv[1:]
     sub_command = all_args[0].strip()
 
     # Install program
@@ -72,7 +73,5 @@ def runArchInstaller():
         dependencies.install_main()
         dependencies.install_yay()
 
-    # Install Better Discord
-    elif (sub_command in ("betterdiscordctl", "betterdiscord",
-                          "better-discord")):
-        pass
+    else:
+        custom.runCustom(all_args)
