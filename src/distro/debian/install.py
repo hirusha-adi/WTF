@@ -119,7 +119,7 @@ def installPackage(args: list = None, noconfirm: bool = False):
     if "zoom" in final_command:
         others.zoom()
 
-    if "sublime-text" in final_command:
+    if "sublimetext" in final_command:
         others.sublime_text()
 
     if "vscode" in final_command:
@@ -137,7 +137,7 @@ def installPackage(args: list = None, noconfirm: bool = False):
     if "minecraft" in final_command:
         others.minecraft()
 
-    if "github-desktop" in final_command:
+    if "githubdesktop" in final_command:
         others.github_desktop()
 
     if "virtualbox" in final_command:
