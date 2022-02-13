@@ -6,7 +6,7 @@ def updateSystem():
 
 
 def updateSystemForce():
-    os.system("sudo apt update -y")
+    os.system("sudo apt update")
 
 
 def upgradeSystem():
@@ -14,4 +14,4 @@ def upgradeSystem():
 
 
 def fullUpgrade():
-    os.system("sudo apt update && sudo apt upgrade")
+    os.system("sudo apt update && sudo apt upgrade -y")
