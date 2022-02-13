@@ -2,7 +2,7 @@ import os
 import sys
 
 
-def installPackage(args: list = None):
+def runCustom(args: list = None):
     if args is None:
         sys.exit("[E] Please enter the args")
 
