@@ -63,3 +63,7 @@ def runArchInstaller():
                                   "upgradefull", "fullupgrade",
                                   "fixupgrade", "upgradefix")):
         updates.fullUpgrade()
+
+    elif (all_args[0].strip() in ("setup", "setup-wtf", "setupwtf", "wtf", "wtfsetup")):
+        dependencies.install_main()
+        dependencies.install_yay()
