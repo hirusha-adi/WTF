@@ -6,7 +6,7 @@ import src.utils.dirs as dirs
 
 
 def install_main():
-    os.system("sudo pacman -Sy git base-devel --noconfirm")
+    os.system("sudo pacman -Sy curl wget git base-devel --noconfirm")
 
 
 def install_yay():
