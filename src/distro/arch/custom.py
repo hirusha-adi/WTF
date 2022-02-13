@@ -1,23 +1,23 @@
 import os
 import sys
-import requests
+
+from . import utils
 
 
 def runCustom(args: list = None):
     if args is None:
         sys.exit("[E] Please enter the args")
 
-    final_command = ""
-    for arg in args:
-        final_command += f"{arg} "
+    final_command = utils.process_final_command(args=args, checks=(
+        "wtf",
+        "./wtf"
+    ))
 
     os.system(f"yay {final_command}")
 
 
 def install_betterDiscord():
-    data = requests.get(
-        "https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl").content
-    with open("betterdiscordctl", "wb") as file:
-        file.write(data)
+    os.system(
+        "curl -O https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl")
     os.system("chmod +x betterdiscordctl")
     os.system("sudo mv betterdiscordctl /usr/local/bin")
