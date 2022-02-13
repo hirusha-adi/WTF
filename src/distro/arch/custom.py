@@ -1,5 +1,6 @@
 import os
 import sys
+import requests
 
 
 def runCustom(args: list = None):
@@ -11,3 +12,12 @@ def runCustom(args: list = None):
         final_command += f"{arg} "
 
     os.system(f"yay {final_command}")
+
+
+def install_betterDiscord():
+    data = requests.get(
+        "https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl").content
+    with open("") as file:
+        file.write(data)
+    os.system("chmod +x betterdiscordctl")
+    os.system("sudo mv betterdiscordctl /usr/local/bin")
