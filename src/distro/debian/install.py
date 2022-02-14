@@ -106,7 +106,7 @@ def installPackage(args: list = None, noconfirm: bool = False):
         sys.exit("[E] Please enter the package names to install")
 
     final_command = utils.process_final_command(args=args, checks=(
-        "-S",
+        "-y",
         "-Sy"
     ))
 
@@ -153,6 +153,6 @@ def installPackage(args: list = None, noconfirm: bool = False):
         others.tor_browser()
 
     if noconfirm:
-        os.system(f"apt install {final_command} -y")
+        os.system(f"sudo apt install {final_command} -y")
     else:
-        os.system(f"apt install {final_command}")
+        os.system(f"sudo apt install {final_command}")
