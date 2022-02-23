@@ -1,6 +1,6 @@
 # WTF
 
-Linux Package Installer
+Linux Package Manager Wrapper to use the sampe commands on many distro's
 
 # Dependencies
 
