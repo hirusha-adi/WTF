@@ -30,57 +30,62 @@ class Distro:
     try:
         PRETTY_NAME = allInfo["PRETTY_NAME"]
     except KeyError:
-        PRETTY_NAME = allInfo["PRETTY_NAME"]
+        PRETTY_NAME = None
 
     try:
         ID = allInfo["ID"]
     except KeyError:
-        ID = allInfo["ID"]
+        ID = None
+
+    try:
+        ID_LIKE = allInfo["ID_LIKE"]
+    except KeyError:
+        ID_LIKE = None
 
     try:
         BUILD_ID = allInfo["BUILD_ID"]
     except KeyError:
-        BUILD_ID = allInfo["BUILD_ID"]
+        BUILD_ID = None
 
     try:
         ANSI_COLOR = allInfo["ANSI_COLOR"]
     except KeyError:
-        ANSI_COLOR = allInfo["ANSI_COLOR"]
+        ANSI_COLOR = None
 
     try:
         HOME_URL = allInfo["HOME_URL"]
     except KeyError:
-        HOME_URL = allInfo["HOME_URL"]
+        HOME_URL = None
 
     try:
         DOCUMENTATION_URL = allInfo["DOCUMENTATION_URL"]
     except KeyError:
-        DOCUMENTATION_URL = allInfo["DOCUMENTATION_URL"]
+        DOCUMENTATION_URL = None
 
     try:
         SUPPORT_URL = allInfo["SUPPORT_URL"]
     except KeyError:
-        SUPPORT_URL = allInfo["SUPPORT_URL"]
+        SUPPORT_URL = None
 
     try:
         BUG_REPORT_URL = allInfo["BUG_REPORT_URL"]
     except KeyError:
-        BUG_REPORT_URL = allInfo["BUG_REPORT_URL"]
+        BUG_REPORT_URL = None
 
     try:
         LOGO = allInfo["LOGO"]
     except KeyError:
-        LOGO = allInfo["LOGO"]
+        LOGO = None
 
     try:
         IMAGE_ID = allInfo["IMAGE_ID"]
     except KeyError:
-        IMAGE_ID = allInfo["IMAGE_ID"]
+        IMAGE_ID = None
 
     try:
         IMAGE_VERSION = allInfo["IMAGE_VERSION"]
     except KeyError:
-        IMAGE_VERSION = allInfo["IMAGE_VERSION"]
+        IMAGE_VERSION = None
 
 
 def getName():
@@ -100,6 +105,13 @@ def getPrettyName():
 def getID():
     try:
         return getAllInfo()["ID"]
+    except KeyError:
+        return None
+
+
+def getIDLike():
+    try:
+        return getAllInfo()["ID_LIKE"]
     except KeyError:
         return None
 
