@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 from src.program import startProgram
+
 if __name__ == "__main__":
     startProgram()
