@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-import src.distro.debian.manager as manager
-manager.runDebianInstaller()
+from src.program import startProgram
+if __name__ == "__main__":
+    startProgram()
